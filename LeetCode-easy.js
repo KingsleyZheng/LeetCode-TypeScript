@@ -90,3 +90,23 @@ var countAndSay = function(n) {
     return res;
 };
 //执行用时 : 108 ms, 在Count and Say的JavaScript提交中击败了49.16% 的用户
+//不用递归
+var countAndSay = function(n) {
+    if (n<=0) return "";
+    let res = "1";
+    while (--n) {
+        let cur = "";
+        let l = res.length;
+        for (let i=0;i<l;i++){
+            let count = 1;
+            while (i+1<l && res[i] == res[i+1]) {
+                count++;
+                i++;
+            }
+            cur += count.toString() + res[i];
+        }
+        res = cur;
+    }
+    return res;
+};
+//执行用时 : 84 ms, 在Count and Say的JavaScript提交中击败了98.20% 的用户
