@@ -66,11 +66,27 @@ var searchInsert = function(nums, target) {
 给定一个正整数 n（1 ≤ n ≤ 30），输出报数序列的第 n 项。
 注意：整数顺序将表示为一个字符串。
  */
-//
+//使用递归解法
 /**
  * @param {number} n
  * @return {string}
  */
 var countAndSay = function(n) {
-    
+    if (n==1) return "1";
+    var strLast = countAndSay(n-1);
+    var count = 1;
+    var res = "";
+    for (let i = 0; i < strLast.length; i++) {
+        if (strLast[i] == strLast[i+1]){
+            count++;
+            continue;
+        } else{
+            if(strLast[i]!=strLast[i+1]){
+                res += count.toString() + strLast[i];
+                count=1;
+            }
+        }
+    }
+    return res;
 };
+//执行用时 : 108 ms, 在Count and Say的JavaScript提交中击败了49.16% 的用户
