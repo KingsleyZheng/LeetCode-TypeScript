@@ -125,7 +125,7 @@ var countAndSay = function(n) {
  * @param {number[]} nums
  * @return {number}
  */
-//动态递归
+//动态递归，一个变量记录最大和，一个变量记录当前和，当前和若小于0则重置为下一个数，时间复杂度n
 var maxSubArray = function(nums) {
     let sum = 0;
     let res = nums[0];
