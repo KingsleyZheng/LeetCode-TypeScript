@@ -139,3 +139,26 @@ var maxSubArray = function(nums) {
     }
     return res;
 };
+
+//58. 最后一个单词的长度
+/**
+给定一个仅包含大小写字母和空格 ' ' 的字符串，返回其最后一个单词的长度。
+如果不存在最后一个单词，请返回 0 。
+说明：一个单词是指由字母组成，但不包含任何空格的字符串。
+示例:
+输入: "Hello World"
+输出: 5
+ */
+//先去掉两头的空格，再按空格分成列表，返回最后一个单词的长度。
+//其实可以只去掉末尾的空格，再从末尾数到空格有几个数，该长度就是最后一个单词的长度
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var lengthOfLastWord = function(s) {
+    let sList = s.trim().split(' ');
+    let l = sList.length;
+    if (l == 0) return 0;
+    return sList[l-1].length;
+};
+//执行用时 : 72 ms, 在Length of Last Word的JavaScript提交中击败了98.55% 的用户
