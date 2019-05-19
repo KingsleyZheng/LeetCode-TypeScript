@@ -218,3 +218,4 @@ var addBinary = function(a, b) {
     return res;
 };
 // 执行用时 : 84 ms, 在Add Binary的JavaScript提交中击败了98.42% 的用户
+// 更巧妙的方法是不进行预处理加0，需要时再取出来
