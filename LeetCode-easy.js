@@ -162,3 +162,59 @@ var lengthOfLastWord = function(s) {
     return sList[l-1].length;
 };
 //执行用时 : 72 ms, 在Length of Last Word的JavaScript提交中击败了98.55% 的用户
+
+//67. 二进制求和
+/**
+给定两个二进制字符串，返回他们的和（用二进制表示）。
+输入为非空字符串且只包含数字 1 和 0。
+示例 1:
+输入: a = "11", b = "1"
+输出: "100"
+示例 2:
+输入: a = "1010", b = "1011"
+输出: "10101"
+ */
+/**
+ * @param {string} a
+ * @param {string} b
+ * @return {string}
+ */
+var addBinary = function(a, b) {
+    let res = '';
+    let na = a.length;
+    let nb = b.length;
+    let n = Math.max(na, nb);
+    let carry = false; // 是否需要进位
+    // 在字符串左边补全0至ab长度相等
+    if (na>nb) {
+        for (let i=0;i<na-nb;i++) {
+            b = '0' + b
+        }
+    } else if (na<nb) {
+        for (let i=0;i<nb-na;i++) {
+            a = '0' + a
+        }
+    }
+    // 诸位相加比较大小，决定是否需要进位
+    for (let i=n-1;i>=0;i--) {
+        let tmp = 0;
+        if (carry) {tmp = (a[i] - '0') + (b[i] - '0') + 1;
+        } else {tmp = (a[i] - '0') + (b[i] - '0');}
+        if (tmp == 0) {
+            res = '0' + res;
+            carry = false;
+        } else if (tmp == 1) {
+            res = '1' + res;
+            carry = false;
+        } else if (tmp == 2) {
+            res = '0' + res;
+            carry = true;
+        } else if (tmp == 3) {
+            res = '1' + res;
+            carry = true;
+        }
+    }
+    if (carry) res = '1' + res;
+    return res;
+};
+// 执行用时 : 84 ms, 在Add Binary的JavaScript提交中击败了98.42% 的用户
