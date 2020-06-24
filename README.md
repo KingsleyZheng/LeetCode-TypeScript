@@ -1,2 +1,3 @@
-# LeetCode-by-JavaScript
-用JavaScript刷LeetCode
+# LeetCode-by-JavaScript-and-Go
+
+用 JavaScript 和 golang 刷 LeetCode
