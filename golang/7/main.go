@@ -13,7 +13,7 @@ func main() {
 // 7. 整数反转
 // 给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。
 
-// 先转 string 再转 []byte
+// 自己实现：先转 string 再转 []byte
 func reverse(x int) int {
 	isPositive := true
 	if x < 0 {
