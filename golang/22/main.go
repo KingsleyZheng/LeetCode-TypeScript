@@ -64,13 +64,13 @@ func backtrack(ans *[]string, cur string, open, close, max int) {
 		return
 	}
 	if open < max {
-		cur = cur + "("
-		backtrack(ans, cur, open+1, close, max)
-		cur = cur[:len(cur)-1]
+		// cur = cur + "("
+		backtrack(ans, cur+"(", open+1, close, max)
+		// cur = cur[:len(cur)-1]
 	}
 	if close < open {
-		cur = cur + ")"
-		backtrack(ans, cur, open, close+1, max)
-		cur = cur[:len(cur)-1]
+		// cur = cur + ")"
+		backtrack(ans, cur+")", open, close+1, max)
+		// cur = cur[:len(cur)-1]
 	}
 }
