@@ -17,7 +17,7 @@ func minPathSum(grid [][]int) int {
 		return 0
 	}
 	rows, columns := len(grid), len(grid[0])
-	dp := make([][]int, columns)
+	dp := make([][]int, rows)
 	for i := 0; i < len(dp); i++ {
 		dp[i] = make([]int, columns)
 	}
