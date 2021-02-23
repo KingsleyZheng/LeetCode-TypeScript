@@ -1,3 +1,4 @@
-# LeetCode-by-JavaScript-and-Go
+# LeetCode-TypeScript
 
-用 JavaScript 和 golang 刷 LeetCode
+用 TypeScript 刷 LeetCode
+
