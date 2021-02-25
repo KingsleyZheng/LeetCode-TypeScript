@@ -1,7 +1,7 @@
 // 整数反转
 // 简单
 
-function reverse(x: number): number {
+export function reverse(x: number): number {
   let rev = 0;
   const flag = x > 0 ? 1 : -1;
   x = Math.abs(x);

@@ -2,7 +2,7 @@
 // 简单
 
 // 利用栈
-function isValid(s: string): boolean {
+export function isValid(s: string): boolean {
   const map : any = {
     ')': '(',
     ']': '[',

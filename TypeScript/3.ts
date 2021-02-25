@@ -2,7 +2,7 @@
 // 中等
 
 // 滑动窗口，用一个set 存储当前窗口的所有字符
-function lengthOfLongestSubstring(s: string): number {
+export function lengthOfLongestSubstring(s: string): number {
   const occ = new Set<string>();
   const n = s.length;
   let rk = -1,

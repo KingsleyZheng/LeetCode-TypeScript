@@ -26,7 +26,7 @@ export function reverseList(head: ListNode | null): ListNode | null {
 }
 
 // 迭代
-function reverseList2(head: ListNode | null): ListNode | null {
+export function reverseList2(head: ListNode | null): ListNode | null {
   let prev = null;
   let curr = head;
   while (curr !== null) {

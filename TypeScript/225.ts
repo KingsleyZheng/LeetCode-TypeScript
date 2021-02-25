@@ -2,7 +2,7 @@
 // 简单
 
 // 数字全都存在一个队列里，另一个队列仅在入栈时作为辅助
-class MyStack {
+export class MyStack {
   queue1: number[] = [];
   queue2: number[] = [];
 
